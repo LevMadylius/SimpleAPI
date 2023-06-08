@@ -20,7 +20,7 @@ namespace SimpleAPI.Controllers
         public Task<int> Get(int number) => Task.FromResult(_random.Next(0, number));
 
         [HttpGet]
-        [Route("random")]
+        [Route("randomwithseed")]
         public Task<int> Get(int start, int seed) => Task.FromResult(_random.Next(start, seed));
 
         [HttpGet]
