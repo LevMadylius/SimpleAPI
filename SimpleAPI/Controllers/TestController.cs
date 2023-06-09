@@ -20,6 +20,10 @@ namespace SimpleAPI.Controllers
         public Task<int> Get(int number) => Task.FromResult(_random.Next(0, number));
 
         [HttpGet]
+        [Route("Substract")]
+        public Task<int> Substract(int first, int second) => Task.FromResult(first - second);
+
+        [HttpGet]
         [Route("randomwithseed")]
         public Task<int> Get(int start, int seed) => Task.FromResult(_random.Next(start, seed));
 
